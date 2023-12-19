@@ -54,7 +54,7 @@ export async function loadSectionOnClick(dataFilter) {
       message.error("Sorry, we didn't find anything according to your request.");
       return;
     }
-    musclesList.insertAdjacentHTML('beforeend', makeMarkupMuscles(filteredResult))
+    // musclesList.insertAdjacentHTML('beforeend', makeMarkupMuscles(filteredResult))
     makeMarkupMuscles(filteredResult);
 
     // Збереження в LocalStorage інформації для пагінації сторінки

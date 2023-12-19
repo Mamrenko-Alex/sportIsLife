@@ -73,8 +73,8 @@ export async function loadSectionOnClick(dataFilter) {
       message.error("Sorry, we didn't find anything according to your request.");
       return;
     }
-    musclesList.insertAdjacentHTML('beforeend', makeMarkupMuscles(filteredResult))
-
+    // musclesList.insertAdjacentHTML('beforeend', makeMarkupMuscles(filteredResult))
+    
     // Прослуховування подій прокрутки
     window.addEventListener('scroll', function () {
       // Якщо сторінка прокручена до кінця, викликаємо певні дії

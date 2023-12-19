@@ -16,18 +16,19 @@ export default defineConfig(({ command }) => {
       }
     ],
     build: {
-      assetsInlineLimit: 4096,
+      assetsInlineLimit: 0,
+      chunkSizeWarningLimit: 2000,
       sourcemap: true,
+      manifest: true,
 
       rollupOptions: {
         input: glob.sync('./src/*.html'),
         output: {
-          // manualChunks(id) {
-          //   if (id.includes('node_modules')) {
-          //     return 'vendor';
-          //   }
-        // },
-        manualChunks: undefined,
+          manualChunks(id) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+        },
           entryFileNames: 'commonHelpers.js',
         },
       },

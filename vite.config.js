@@ -36,3 +36,17 @@ export default defineConfig(({ command }) => {
     plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
   };
 });
+
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+// Використовуйте статичні файли у папці 'public'
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '7d', // Заголовок Cache-Control для статичних ресурсів
+}));
+
+app.listen(3000, () => {
+  console.log('Сервер запущено на порту 3000');
+});

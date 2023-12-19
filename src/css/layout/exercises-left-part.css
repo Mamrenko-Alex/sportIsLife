@@ -89,7 +89,7 @@
   line-height: 1;
 }
 
-.daily-icon-img{
+.daily-icon-img {
   fill: var(--primary-color);
 }
 
@@ -102,7 +102,7 @@
 
 .daily-text {
   overflow: hidden;
-  color: #242424;
+  color: var(--second-color);
   text-overflow: ellipsis;
   /* white-space: nowrap; */
   font-size: 14px;

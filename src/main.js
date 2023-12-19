@@ -72,19 +72,3 @@
 //   }
 // });
 
-const express = require('express');
-const app = express();
-
-// Middleware для статичних ресурсів (зображень, стилів, скриптів)
-app.use('/static', express.static('../src/img', {
-  maxAge: '7d', // Заголовок Cache-Control для статичних ресурсів
-  etag: true,   // Додавання ETag для перевірки версії ресурсу
-}));
-
-// Решта вашого коду...
-
-app.listen(3000, () => {
-  console.log('Сервер запущено на порту 3000');
-});
-
-

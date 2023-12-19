@@ -15,25 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSectionOnClick({ filter: 'Muscles', page: 1, limit: 12 }, 'Muscles');
 });
 
-// Функція, яка перевіряє, чи прокручено сторінку до кінця
-function isPageScrolledToBottom() {
-  // Поточна позиція прокрутки
-  var scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-
-  // Висота всього документа
-  var documentHeight = Math.max(
-    document.body.scrollHeight, document.documentElement.scrollHeight,
-    document.body.offsetHeight, document.documentElement.offsetHeight,
-    document.body.clientHeight, document.documentElement.clientHeight
-  );
-
-  // Висота вікна браузера
-  var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-
-  // Перевірка, чи прокручено до кінця сторінки (з іншими умовами, які вам можуть знадобитися)
-  return scrollTop + windowHeight >= documentHeight;
-}
-
 export async function handleCategoryClick(event) {
   event.preventDefault();
   exercisesTag.innerHTML = 'Exercises';
@@ -73,17 +54,8 @@ export async function loadSectionOnClick(dataFilter) {
       message.error("Sorry, we didn't find anything according to your request.");
       return;
     }
-    // musclesList.insertAdjacentHTML('beforeend', makeMarkupMuscles(filteredResult))
-    
-    // Прослуховування подій прокрутки
-    window.addEventListener('scroll', function () {
-      // Якщо сторінка прокручена до кінця, викликаємо певні дії
-      if (isPageScrolledToBottom()) {
-        console.log('Сторінка завантажилась до кінця!');
-        makeMarkupMuscles(filteredResult);
-        // Тут ви можете викликати функції або робити інші дії
-      }
-    });
+    musclesList.insertAdjacentHTML('beforeend', makeMarkupMuscles(filteredResult))
+    makeMarkupMuscles(filteredResult);
 
     // Збереження в LocalStorage інформації для пагінації сторінки
     const { totalPages } = filter;

@@ -108,7 +108,7 @@
     "src": "favorites.html",
     "isEntry": true,
     "imports": [
-      "_main-e96f0783.js",
+      "_main-d790cbd4.js",
       "_vendor-ac1aa0cc.js"
     ],
     "assets": [
@@ -116,13 +116,13 @@
     ]
   },
   "main.css": {
-    "file": "assets/main-f66780de.css",
+    "file": "assets/main-06a0e447.css",
     "src": "main.css"
   },
-  "_main-e96f0783.js": {
-    "file": "assets/main-e96f0783.js",
+  "_main-d790cbd4.js": {
+    "file": "assets/main-d790cbd4.js",
     "css": [
-      "assets/main-f66780de.css"
+      "assets/main-06a0e447.css"
     ]
   },
   "_vendor-ac1aa0cc.js": {

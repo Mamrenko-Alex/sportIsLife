@@ -1,30 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>.header {
+  position: fixed;
+  top: 0px;
+  background-image: linear-gradient(to bottom, var(--primary-color) 75%, rgba(244, 244, 244, 0));
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/sportIsLife/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YOUR ENERGY</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  min-width: 335px;
+  padding: 20px;
+}
+.active {
+  background-color: var(--primary-color);
+}
+.black {
+  color: var(--second-color);
+}
+.display-none {
+  display: none;
+}
+.burger-button {
+  border: none;
+  background-color: transparent;
+}
+.social-links {
+  display: flex;
+  flex-direction: row;
+}
+.social-links li:not(:last-child) {
+  margin-right: 12px;
+}
+.social-links-items {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-text-subtitle);
+  width: 44px;
+  height: 44px;
+  fill: var(--color-text-subtitle);
+  padding: 8px;
+  transition: background-color fill var(--animation);
+}
+#sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sign-in img {
+  width: 18px;
+  height: 18px;
+}
+.social-links-items:hover,
+.social-links-items:focus {
+  fill: var(--primary-color);
+  background-color: var(--color-text-subtitle);
+  border: none;
+}
+.social-links li:hover,
+.social-links li:focus {
+  border: 1px solid rgba(36, 36, 36, 0.5);
+}
+.social-links-items svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-navigattion {
+  width: 233px;
+  height: 52px;
+  background-color: var(--second-color);
+  border-radius: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 34px;
+}
+.page-navigattion-item {
+  display: flex;
+  padding: 6px 12px;
+  border-radius: 30px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--primary-color);
+  transition: background-color fill var(--animation);
+}
+.page-navigattion a:hover,
+.page-navigattion a:focus {
+  border: 1px solid var(--primary-color);
+  transition: 300ms;
+}
+@media screen and (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .social-links {
+    display: none;
+  }
+  .page-navigattion {
+    display: none;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container-header {
+    max-width: 375px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-header {
+    min-width: 768px;
+    padding: 24px 32px 24px 32px;
+    /* padding: 32px 0 32px; */
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container-header {
+    min-width: 1440px;
+    padding: 24px 32px 24px 32px;
+    /* padding: 32px 0 32px; */
+  }
+}
+    </style>
+    <link rel="icon" type="image/svg+xml" href="/sportIsLife/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUR ENERGY</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/izitoast@1/dist/css/iziToast.min.css"
     />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"
-    rel="stylesheet" />
-  
-  <script type="module" crossorigin src="/sportIsLife/commonHelpers.js"></script>
-  <link rel="modulepreload" crossorigin href="/sportIsLife/assets/main-5dd907f5.js">
-  <link rel="stylesheet" href="/sportIsLife/assets/main-06753d0a.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script type="module" crossorigin src="/sportIsLife/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/sportIsLife/assets/main-e96f0783.js">
+    <link rel="modulepreload" crossorigin href="/sportIsLife/assets/vendor-ac1aa0cc.js">
+    <link rel="stylesheet" href="/sportIsLife/assets/main-f66780de.css">
+  </head>
 
-<body>
-  <header class="header" id="header">
+  <body>
+    <header class="header" id="header">
   <div class="container-header">
     <div>
       <a href="./index.html">
@@ -99,7 +244,7 @@
   </div>
 </header>
 
-  <div class="burger-modal visually-hidden" id="burger">
+    <div class="burger-modal visually-hidden" id="burger">
   <button class="burger-button-close" id="burger-button-close">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" stroke="white">
       <use href="/sportIsLife/assets/sprite-9db62079.svg#icon-close" />
@@ -135,7 +280,7 @@
 </div>
 
 
-  <section class="container pd-top">
+    <section class="container pd-top">
   <h2 class="favourites_title">Favorites</h2>
   <div class="favourites_wrapper wrap-js">
     <div class="favourites_left">
@@ -187,7 +332,7 @@
             />
             <source
               media="(min-width: 1440px)"
-              srcset="data:image/webp;base64,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 1x, /sportIsLife/assets/quote-img-desctop@2x-15e52fd1.webp 2x"
+              srcset="/sportIsLife/assets/quote-img-desctop-fbb9e152.webp 1x, /sportIsLife/assets/quote-img-desctop@2x-15e52fd1.webp 2x"
               type="image/webp"
             />
             <!-- Якщо браузер не підтримуе елемент picture -->
@@ -215,7 +360,7 @@
   </div>
 </section>
 
-  <div class="overlay">
+    <div class="overlay">
   <div class="modal-info modal-get-raiting visually-hidden">
     <button class="modal-button-close" id="button-close">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
@@ -228,7 +373,6 @@
 <button type="submit" data-id=""></button>
 
 
-  
-</body>
-
+    
+  </body>
 </html>

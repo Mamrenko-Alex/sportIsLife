@@ -1,0 +1,131 @@
+{
+  "img/svg/sprite.svg": {
+    "file": "assets/sprite-9db62079.svg",
+    "src": "img/svg/sprite.svg"
+  },
+  "img/icon-google.svg": {
+    "file": "assets/icon-google-0cf576a5.svg",
+    "src": "img/icon-google.svg"
+  },
+  "img/hero-img/hero-mobile.webp": {
+    "file": "assets/hero-mobile-3ce1bd27.webp",
+    "src": "img/hero-img/hero-mobile.webp"
+  },
+  "img/hero-img/hero-mobile@2x.webp": {
+    "file": "assets/hero-mobile@2x-20dd6586.webp",
+    "src": "img/hero-img/hero-mobile@2x.webp"
+  },
+  "img/hero-img/hero-tablet.webp": {
+    "file": "assets/hero-tablet-5981368a.webp",
+    "src": "img/hero-img/hero-tablet.webp"
+  },
+  "img/hero-img/hero-tablet@2x.webp": {
+    "file": "assets/hero-tablet@2x-3794377c.webp",
+    "src": "img/hero-img/hero-tablet@2x.webp"
+  },
+  "img/quote-img/favorites/quote-img-mobile.webp": {
+    "file": "assets/quote-img-mobile-0f465e85.webp",
+    "src": "img/quote-img/favorites/quote-img-mobile.webp"
+  },
+  "img/quote-img/favorites/quote-img-mobile@2x.webp": {
+    "file": "assets/quote-img-mobile@2x-244b5a09.webp",
+    "src": "img/quote-img/favorites/quote-img-mobile@2x.webp"
+  },
+  "img/hero-img/hero-desctop.webp": {
+    "file": "assets/hero-desctop-8b6e246a.webp",
+    "src": "img/hero-img/hero-desctop.webp"
+  },
+  "img/hero-img/hero-desctop@2x.webp": {
+    "file": "assets/hero-desctop@2x-44f99c59.webp",
+    "src": "img/hero-img/hero-desctop@2x.webp"
+  },
+  "img/quote-img/favorites/quote-img-tablet.webp": {
+    "file": "assets/quote-img-tablet-d93404f6.webp",
+    "src": "img/quote-img/favorites/quote-img-tablet.webp"
+  },
+  "img/quote-img/favorites/quote-img-tablet@2x.webp": {
+    "file": "assets/quote-img-tablet@2x-aa03c8dc.webp",
+    "src": "img/quote-img/favorites/quote-img-tablet@2x.webp"
+  },
+  "img/hero-img/decoration-img.webp": {
+    "file": "assets/decoration-img-0955a92b.webp",
+    "src": "img/hero-img/decoration-img.webp"
+  },
+  "img/hero-img/decoration-img@2x.webp": {
+    "file": "assets/decoration-img@2x-f798e9d6.webp",
+    "src": "img/hero-img/decoration-img@2x.webp"
+  },
+  "img/quote-img/favorites/quote-img-desctop.webp": {
+    "file": "assets/quote-img-desctop-fbb9e152.webp",
+    "src": "img/quote-img/favorites/quote-img-desctop.webp"
+  },
+  "img/quote-img/favorites/quote-img-desctop@2x.webp": {
+    "file": "assets/quote-img-desctop@2x-15e52fd1.webp",
+    "src": "img/quote-img/favorites/quote-img-desctop@2x.webp"
+  },
+  "img/hero-img/decoration-img.png": {
+    "file": "assets/decoration-img-e2096da7.png",
+    "src": "img/hero-img/decoration-img.png"
+  },
+  "img/exercises-img/women-sports@2x.jpg": {
+    "file": "assets/women-sports@2x-a3ebb7b8.jpg",
+    "src": "img/exercises-img/women-sports@2x.jpg"
+  },
+  "img/hero-img/decoration-img@2x.png": {
+    "file": "assets/decoration-img@2x-58257e23.png",
+    "src": "img/hero-img/decoration-img@2x.png"
+  },
+  "img/exercises-img/women-sports.jpg": {
+    "file": "assets/women-sports-d67ebd1c.jpg",
+    "src": "img/exercises-img/women-sports.jpg"
+  },
+  "img/quote-img/home/quote-img-mobile.webp": {
+    "file": "assets/quote-img-mobile-c5a6bd48.webp",
+    "src": "img/quote-img/home/quote-img-mobile.webp"
+  },
+  "img/quote-img/home/quote-img-mobile@2x.webp": {
+    "file": "assets/quote-img-mobile@2x-f33e4959.webp",
+    "src": "img/quote-img/home/quote-img-mobile@2x.webp"
+  },
+  "img/quote-img/home/quote-img-tablet.webp": {
+    "file": "assets/quote-img-tablet-d89894cd.webp",
+    "src": "img/quote-img/home/quote-img-tablet.webp"
+  },
+  "img/quote-img/home/quote-img-tablet@2x.webp": {
+    "file": "assets/quote-img-tablet@2x-834e4012.webp",
+    "src": "img/quote-img/home/quote-img-tablet@2x.webp"
+  },
+  "img/quote-img/home/quote-img-desctop.webp": {
+    "file": "assets/quote-img-desctop-4dfe762c.webp",
+    "src": "img/quote-img/home/quote-img-desctop.webp"
+  },
+  "img/quote-img/home/quote-img-desctop@2x.webp": {
+    "file": "assets/quote-img-desctop@2x-cd4dd79b.webp",
+    "src": "img/quote-img/home/quote-img-desctop@2x.webp"
+  },
+  "favorites.html": {
+    "file": "commonHelpers.js",
+    "src": "favorites.html",
+    "isEntry": true,
+    "imports": [
+      "_main-e96f0783.js",
+      "_vendor-ac1aa0cc.js"
+    ],
+    "assets": [
+      "assets/sprite-9db62079.svg"
+    ]
+  },
+  "main.css": {
+    "file": "assets/main-f66780de.css",
+    "src": "main.css"
+  },
+  "_main-e96f0783.js": {
+    "file": "assets/main-e96f0783.js",
+    "css": [
+      "assets/main-f66780de.css"
+    ]
+  },
+  "_vendor-ac1aa0cc.js": {
+    "file": "assets/vendor-ac1aa0cc.js"
+  }
+}

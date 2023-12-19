@@ -23,11 +23,6 @@ if (window.innerWidth <= 768) {
   });
 }
 
-// Importing authentication.js after the full HTML render
-document.addEventListener('DOMContentLoaded', () => {
-
-});
-
 // Importing search.js after clicking an element with the class 'muscles-item'
 document.addEventListener('click', event => {
   const targetElement = event.target;

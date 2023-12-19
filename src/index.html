@@ -8,6 +8,7 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/izitoast@1/dist/css/iziToast.min.css"
+      defer
     />
     <link
       rel="stylesheet"
@@ -15,8 +16,9 @@
       integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      defer
     />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +29,6 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-
     <load ="partials/header.html" />
     <load ="partials/burger.html" />
     <main>
@@ -39,15 +40,11 @@
           <load ="partials/exercises-right-part.html" />
         </div>
       </section>
-
-
     </main>
 
     <load ="partials/footer.html" />
     <load ="partials/modal.html" />
 
-
-
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js" async></script>
   </body>
 </html>

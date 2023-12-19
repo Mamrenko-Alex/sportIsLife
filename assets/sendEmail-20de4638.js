@@ -1,2 +1,0 @@
-import{m as a,f as n}from"./exercises-right-part-filter-aa608ad2.js";import"./vendor-2296de4d.js";const o=document.querySelector("#subscribe-form"),t=o.querySelector("#email");o.addEventListener("submit",l);async function l(r){r.preventDefault();const{value:s}=t;if(!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(s)){a.info("Enter the following sample email - 'test@gmail.com'"),t.value="";return}try{const e=await n.addSubscription({email:s});a.success(e.message)}catch(e){console.log(e)}finally{t.value=""}}
-//# sourceMappingURL=sendEmail-20de4638.js.map

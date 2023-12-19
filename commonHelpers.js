@@ -1,11 +1,11 @@
-var J=Object.defineProperty;var D=(e,t,s)=>t in e?J(e,t,{enumerable:!0,configurable:!0,writable:!0,value:s}):e[t]=s;var B=(e,t,s)=>(D(e,typeof t!="symbol"?t+"":t,s),s);/* empty css                    */import{i as P,g as z,a as Q,b as K,c as G,d as Y,e as R,s as W,G as w,f as X,h as Z,j as g}from"./assets/vendor-ac1aa0cc.js";(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))a(o);new MutationObserver(o=>{for(const i of o)if(i.type==="childList")for(const r of i.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&a(r)}).observe(document,{childList:!0,subtree:!0});function s(o){const i={};return o.integrity&&(i.integrity=o.integrity),o.referrerpolicy&&(i.referrerPolicy=o.referrerpolicy),o.crossorigin==="use-credentials"?i.credentials="include":o.crossorigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function a(o){if(o.ep)return;o.ep=!0;const i=s(o);fetch(o.href,i)}})();function V(){document.querySelector(".filter-list-js").classList.add("hidden-form");const t=document.querySelector(".wrap-js"),s=document.createElement("p");s.className="favorite-text",t.appendChild(s),s.textContent="It appears that you haven`t added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future."}const c="/sportIsLife/assets/sprite-9db62079.svg",f=(e,t)=>e.length<=t?e:`${e.slice(0,t)}...`;function ee(e){const t=document.querySelector(".filter-list-js");t.classList.remove("hidden-form"),e.length>6?t.classList.add("scroll"):t.classList.remove("scroll");const s=e.map(({_id:a,target:o,name:i,bodyPart:r,burnedCalories:l,time:L})=>`
+var J=Object.defineProperty;var D=(t,e,s)=>e in t?J(t,e,{enumerable:!0,configurable:!0,writable:!0,value:s}):t[e]=s;var B=(t,e,s)=>(D(t,typeof e!="symbol"?e+"":e,s),s);import"./assets/main-110d946b.js";import{i as P,g as z,a as Q,b as G,c as K,d as Y,e as N,s as W,G as w,f as X,h as Z,j as g}from"./assets/vendor-ac1aa0cc.js";function V(){document.querySelector(".filter-list-js").classList.add("hidden-form");const e=document.querySelector(".wrap-js"),s=document.createElement("p");s.className="favorite-text",e.appendChild(s),s.textContent="It appears that you haven`t added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future."}const n="/sportIsLife/assets/sprite-9db62079.svg",h=(t,e)=>t.length<=e?t:`${t.slice(0,e)}...`;function tt(t){const e=document.querySelector(".filter-list-js");e.classList.remove("hidden-form"),t.length>6?e.classList.add("scroll"):e.classList.remove("scroll");const s=t.map(({_id:a,target:r,name:l,bodyPart:c,burnedCalories:i,time:L})=>`
   <li class="favourites_list_item" id=${a}>
     <div class="favourites_list_item_up">
       <div class="favourites_list_item_up_left">
-        <span class="favourites_btn_workout">${f(o,6)}</span>
+        <span class="favourites_btn_workout">${h(r,6)}</span>
         <button id="btnTrash" class="favourites_btn_trash_icon favourites_btn_trash" data-id=${a}>
           <svg class="favourites_btn_trash_icon" width="16" height="16" aria-label="trash" data-id=${a}>
-            <use class="favourites_btn_trash_icon" href="${c}#icon-trash" data-id=${a}></use>
+            <use class="favourites_btn_trash_icon" href="${n}#icon-trash" data-id=${a}></use>
           </svg>
         </button>
       </div>
@@ -13,7 +13,7 @@ var J=Object.defineProperty;var D=(e,t,s)=>t in e?J(e,t,{enumerable:!0,configura
         <button class="favourites_btn_start" data-id=${a}>
           <p class="favourites_btn_start_text" data-id=${a}>start</p>
           <svg class="favourites_btn_start_icon" width="16" height="16" aria-label="arrow" data-id=${a}>
-            <use href="${c}#icon-arrow" data-id=${a}></use>
+            <use href="${n}#icon-arrow" data-id=${a}></use>
           </svg>
         </button>
       </div>
@@ -21,102 +21,102 @@ var J=Object.defineProperty;var D=(e,t,s)=>t in e?J(e,t,{enumerable:!0,configura
     <div class="favourites_list_item_middle">
       <div class="favourites_list_item_middle_icon">
         <svg class="favourites_list_item_middle_icon_svg">
-          <use href="${c}#icon-run-man"></use>
+          <use href="${n}#icon-run-man"></use>
         </svg>
       </div>
-      <h3 class="favourites_list_item_middle_title">${f(i,16)}</h3>
+      <h3 class="favourites_list_item_middle_title">${h(l,16)}</h3>
     </div>
     <div class="favourites_list_item_bottom">
       <ul class="favourites_list_item_bottom_list">
         <li class="favourites_list_item_bottom_list_item">
           <p class="favourites_list_item_bottom_list_item_text">
-            Burned calories: <span>${l}/${L}</span>
+            Burned calories: <span>${i}/${L}</span>
           </p>
         </li>
         <li class="favourites_list_item_bottom_list_item">
           <p class="favourites_list_item_bottom_list_item_text">
-            Body part: <span>${f(r,5)}</span>
+            Body part: <span>${h(c,5)}</span>
           </p>
         </li>
         <li class="favourites_list_item_bottom_list_item">
-          <p class="favourites_list_item_bottom_list_item_text">Target: <span>${f(o,7)}</span></p>
+          <p class="favourites_list_item_bottom_list_item_text">Target: <span>${h(r,7)}</span></p>
         </li>
       </ul>
     </div>
-  </li>`).join("");t.innerHTML=s}const te={apiKey:"AIzaSyBNBMjRxNAY7Ev3P0n12UWF7CdjphLNQ5M",authDomain:"hosting-test-2fa75.firebaseapp.com",projectId:"hosting-test-2fa75",storageBucket:"hosting-test-2fa75.appspot.com",messagingSenderId:"882269537085",appId:"1:882269537085:web:b0e1d25d79d88d76b4bb54"},A=P(te),S=z(A),E=Q(A),se=async e=>{const t=S.currentUser;if(t){const s=e;try{W(R(E,t.email,e._id),s)}catch(a){console.log(a.message)}}},ae=async e=>{const t=localStorage.getItem("user");if(t)try{Y(R(E,t,e))}catch(s){console.log(s.message)}},U=async()=>{const e=localStorage.getItem("user"),t=[];if(!e)return;(await K(G(E,e))).forEach(a=>{t.push(a.data())}),localStorage.setItem("favorites",JSON.stringify(t))};function m(){U();const e=JSON.parse(localStorage.getItem("favorites"));if(!(e!=null&&e.length)){V();return}ee(e)}const I=document.getElementById("home"),q=document.getElementById("favorites"),k=document.getElementById("home-text"),j=document.getElementById("favorites-text");document.getElementById("navigation");const oe=document.getElementById("sign-in-js"),ie=document.getElementById("sign-out"),ne=window.location.href.toString();let re=ne.slice(-14);const le=()=>{re==="favorites.html"?(I.classList.remove("active"),k.classList.remove("black"),q.classList.add("active"),j.classList.add("black"),oe.classList.add("visually-hidden"),ie.classList.add("visually-hidden"),m()):(I.classList.add("active"),k.classList.add("black"),q.classList.remove("active"),j.classList.remove("black"))};le();const ce=document.getElementById("burger-button"),x=document.getElementById("burger"),de=document.getElementById("burger-button-close"),ue=async()=>{document.getElementById("header").classList.remove("container"),x.classList.remove("visually-hidden"),document.body.classList.add("disable-scroll")},me=async e=>{document.getElementById("header").classList.add("container"),x.classList.add("visually-hidden"),document.body.classList.remove("disable-scroll")},fe=e=>{e.key==="Escape"&&x.classList.add("visually-hidden"),document.body.classList.remove("disable-scroll")};ce.addEventListener("click",ue);de.addEventListener("click",me);document.addEventListener("keydown",fe);const he=new w,d=document.getElementById("sign-in"),b=document.getElementById("sign-out"),$=document.getElementById("user");$.innerHTML=localStorage.getItem("user");const ge=window.location.href.toString();localStorage.getItem("user")&&(b.classList.remove("display-none"),d.classList.add("display-none"),d.style.display="none");const ve=async()=>{await X(S,he).then(e=>{w.credentialFromResult(e).accessToken;const s=e.user;localStorage.user=s.email,$.innerHTML=localStorage.getItem("user"),b.classList.remove("display-none"),d.classList.add("display-none"),d.style.display="none",U()}).catch(e=>{const t=e.message;console.log(t),w.credentialFromError(e)})},pe=async()=>{await Z(S).then(()=>{$.innerHTML="",localStorage.removeItem("user"),ge.slice(-14)===favorites.html&&m()}).catch(e=>{console.log(e.message)}),b.classList.add("display-none"),d.classList.remove("display-none"),d.style.display="flex",localStorage.removeItem("favorites")};d.addEventListener("click",ve);b.addEventListener("click",pe);class ye{constructor(){this.overlay=document.querySelector(".overlay"),this.modal=document.querySelector(".modal-info"),this.closeButton,this.closeButtonHandler=()=>this.close(),this.escapeKeyHandler=t=>this.closeEsc(t),this.overlayClickHandler=t=>this.closeBack(t)}open(t){this.overlay.innerHTML=t,this.overlay.style.zIndex=3,this.overlay.style.display="flex",this.modal.classList.remove("visually-hidden"),this.closeButton=document.querySelector(".modal-button-close"),document.body.classList.add("no-scroll"),this.closeButton.addEventListener("click",this.closeButtonHandler),document.addEventListener("keydown",this.escapeKeyHandler),this.overlay.addEventListener("click",this.overlayClickHandler)}close(){this.modal=document.querySelector(".modal-info")||document.querySelector(".modal-get-raiting"),this.overlay.style.display="none",this.overlay.style.zIndex=-1,this.modal.classList.add("visually-hidden"),document.body.classList.remove("no-scroll"),this.closeButton.removeEventListener("click",this.closeButtonHandler),document.removeEventListener("keydown",this.escapeKeyHandler),this.overlay.removeEventListener("click",this.overlayClickHandler)}closeEsc(t){t.key==="Escape"&&this.close()}closeBack(t){t.target===this.overlay&&this.close()}}const p=new ye,n=class{static handleErrors(t){return async()=>{try{return await t()}catch(s){console.error("Помилка при запиті: ",s.message)}}}static async fetchJson(t,s){return(await fetch(t,s)).json()}async getQuotes(){return await n.handleErrors(async()=>await n.fetchJson(`${n.BASE_URL}/quote`))()}async getByFilterName(t){return await n.handleErrors(async()=>{const a=new URLSearchParams({...t});return await n.fetchJson(`${n.BASE_URL}/filters?${a}`)})()}async getByFilterCategory(t){return await n.handleErrors(async()=>{const a=new URLSearchParams({...t});return await n.fetchJson(`${n.BASE_URL}/exercises?${a}`)})()}async getOneExercises(t){return await n.handleErrors(async()=>await n.fetchJson(`${n.BASE_URL}/exercises/${t}`))()}async addExercisesRate(t,s){return await n.handleErrors(async()=>{const o={method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify(s)};return await n.fetchJson(`${n.BASE_URL}/exercises/${t}/rating`,o)})()}async addSubscription(t){return await n.handleErrors(async()=>{const a={method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(t)};return await n.fetchJson(`${n.BASE_URL}/subscription`,a)})()}};let v=n;B(v,"BASE_URL","https://your-energy.b.goit.study/api");const _=new v,y={quoteText:document.querySelector(".quote-text"),quoteAuthor:document.querySelector(".quote-author")};document.addEventListener("DOMContentLoaded",be);async function be(){const e=localStorage.getItem("quote");if(e){const t=new Date().toDateString(),{date:s,quote:a,author:o}=JSON.parse(e);t!==s?C():(y.quoteText.innerHTML=a,y.quoteAuthor.innerHTML=o)}else C()}async function C(){const e=await _.getQuotes(),{author:t,quote:s}=e,a={author:t,quote:s,date:new Date().toDateString()};localStorage.setItem("quote",JSON.stringify(a)),y.quoteText.innerHTML=s,y.quoteAuthor.innerHTML=t}function _e(){const e=document.createElement("button");e.className="scroll-up-button hidden";const t=document.createElementNS("http://www.w3.org/2000/svg","svg");t.setAttribute("viewBox","0 0 32 32"),t.setAttribute("class","button-icon");const s=document.createElementNS("http://www.w3.org/2000/svg","use");s.setAttributeNS("http://www.w3.org/1999/xlink","href",`${c}#icon-arrow`),t.appendChild(s),e.appendChild(t),e.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})}),document.addEventListener("scroll",function(){window.scrollY>50?e.classList.remove("hidden"):e.classList.add("hidden")}),document.body.appendChild(e)}_e();function Le(e){if(e)return e[0].toUpperCase()+e.slice(1)}function we(e){const t=(e%1).toFixed(1)*100;let s='<div class="rating-container-not-cursore" data-rating="0">';for(let a=1;a<=e+1;a+=1)a<=e?s+=`<span class="star-js selected" data-value="${a}"><svg class="exercises_btn_start_icon_modal star-js selected">
-              <use xlink:href="${c}#icon-star"></use>
+  </li>`).join("");e.innerHTML=s}const et={apiKey:"AIzaSyBNBMjRxNAY7Ev3P0n12UWF7CdjphLNQ5M",authDomain:"hosting-test-2fa75.firebaseapp.com",projectId:"hosting-test-2fa75",storageBucket:"hosting-test-2fa75.appspot.com",messagingSenderId:"882269537085",appId:"1:882269537085:web:b0e1d25d79d88d76b4bb54"},A=P(et),S=z(A),E=Q(A),st=async t=>{const e=S.currentUser;if(e){const s=t;try{W(N(E,e.email,t._id),s)}catch(a){console.log(a.message)}}},at=async t=>{const e=localStorage.getItem("user");if(e)try{Y(N(E,e,t))}catch(s){console.log(s.message)}},U=async()=>{const t=localStorage.getItem("user"),e=[];if(!t)return;(await G(K(E,t))).forEach(a=>{e.push(a.data())}),localStorage.setItem("favorites",JSON.stringify(e))};function m(){U();const t=JSON.parse(localStorage.getItem("favorites"));if(!(t!=null&&t.length)){V();return}tt(t)}const I=document.getElementById("home"),k=document.getElementById("favorites"),q=document.getElementById("home-text"),j=document.getElementById("favorites-text");document.getElementById("navigation");const ot=document.getElementById("sign-in-js"),it=document.getElementById("sign-out"),nt=window.location.href.toString();let rt=nt.slice(-14);const ct=()=>{rt==="favorites.html"?(I.classList.remove("active"),q.classList.remove("black"),k.classList.add("active"),j.classList.add("black"),ot.classList.add("visually-hidden"),it.classList.add("visually-hidden"),m()):(I.classList.add("active"),q.classList.add("black"),k.classList.remove("active"),j.classList.remove("black"))};ct();const lt=document.getElementById("burger-button"),x=document.getElementById("burger"),dt=document.getElementById("burger-button-close"),ut=async()=>{document.getElementById("header").classList.remove("container"),x.classList.remove("visually-hidden"),document.body.classList.add("disable-scroll")},mt=async t=>{document.getElementById("header").classList.add("container"),x.classList.add("visually-hidden"),document.body.classList.remove("disable-scroll")},ht=t=>{t.key==="Escape"&&x.classList.add("visually-hidden"),document.body.classList.remove("disable-scroll")};lt.addEventListener("click",ut);dt.addEventListener("click",mt);document.addEventListener("keydown",ht);const vt=new w,d=document.getElementById("sign-in"),b=document.getElementById("sign-out"),$=document.getElementById("user");$.innerHTML=localStorage.getItem("user");const gt=window.location.href.toString();localStorage.getItem("user")&&(b.classList.remove("display-none"),d.classList.add("display-none"),d.style.display="none");const ft=async()=>{await X(S,vt).then(t=>{w.credentialFromResult(t).accessToken;const s=t.user;localStorage.user=s.email,$.innerHTML=localStorage.getItem("user"),b.classList.remove("display-none"),d.classList.add("display-none"),d.style.display="none",U()}).catch(t=>{const e=t.message;console.log(e),w.credentialFromError(t)})},pt=async()=>{await Z(S).then(()=>{$.innerHTML="",localStorage.removeItem("user"),gt.slice(-14)===favorites.html&&m()}).catch(t=>{console.log(t.message)}),b.classList.add("display-none"),d.classList.remove("display-none"),d.style.display="flex",localStorage.removeItem("favorites")};d.addEventListener("click",ft);b.addEventListener("click",pt);class yt{constructor(){this.overlay=document.querySelector(".overlay"),this.modal=document.querySelector(".modal-info"),this.closeButton,this.closeButtonHandler=()=>this.close(),this.escapeKeyHandler=e=>this.closeEsc(e),this.overlayClickHandler=e=>this.closeBack(e)}open(e){this.overlay.innerHTML=e,this.overlay.style.zIndex=3,this.overlay.style.display="flex",this.modal.classList.remove("visually-hidden"),this.closeButton=document.querySelector(".modal-button-close"),document.body.classList.add("no-scroll"),this.closeButton.addEventListener("click",this.closeButtonHandler),document.addEventListener("keydown",this.escapeKeyHandler),this.overlay.addEventListener("click",this.overlayClickHandler)}close(){this.modal=document.querySelector(".modal-info")||document.querySelector(".modal-get-raiting"),this.overlay.style.display="none",this.overlay.style.zIndex=-1,this.modal.classList.add("visually-hidden"),document.body.classList.remove("no-scroll"),this.closeButton.removeEventListener("click",this.closeButtonHandler),document.removeEventListener("keydown",this.escapeKeyHandler),this.overlay.removeEventListener("click",this.overlayClickHandler)}closeEsc(e){e.key==="Escape"&&this.close()}closeBack(e){e.target===this.overlay&&this.close()}}const p=new yt,o=class{static handleErrors(e){return async()=>{try{return await e()}catch(s){console.error("Помилка при запиті: ",s.message)}}}static async fetchJson(e,s){return(await fetch(e,s)).json()}async getQuotes(){return await o.handleErrors(async()=>await o.fetchJson(`${o.BASE_URL}/quote`))()}async getByFilterName(e){return await o.handleErrors(async()=>{const a=new URLSearchParams({...e});return await o.fetchJson(`${o.BASE_URL}/filters?${a}`)})()}async getByFilterCategory(e){return await o.handleErrors(async()=>{const a=new URLSearchParams({...e});return await o.fetchJson(`${o.BASE_URL}/exercises?${a}`)})()}async getOneExercises(e){return await o.handleErrors(async()=>await o.fetchJson(`${o.BASE_URL}/exercises/${e}`))()}async addExercisesRate(e,s){return await o.handleErrors(async()=>{const r={method:"PATCH",headers:{"Content-Type":"application/json"},body:JSON.stringify(s)};return await o.fetchJson(`${o.BASE_URL}/exercises/${e}/rating`,r)})()}async addSubscription(e){return await o.handleErrors(async()=>{const a={method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(e)};return await o.fetchJson(`${o.BASE_URL}/subscription`,a)})()}};let f=o;B(f,"BASE_URL","https://your-energy.b.goit.study/api");const _=new f,y={quoteText:document.querySelector(".quote-text"),quoteAuthor:document.querySelector(".quote-author")};document.addEventListener("DOMContentLoaded",bt);async function bt(){const t=localStorage.getItem("quote");if(t){const e=new Date().toDateString(),{date:s,quote:a,author:r}=JSON.parse(t);e!==s?C():(y.quoteText.innerHTML=a,y.quoteAuthor.innerHTML=r)}else C()}async function C(){const t=await _.getQuotes(),{author:e,quote:s}=t,a={author:e,quote:s,date:new Date().toDateString()};localStorage.setItem("quote",JSON.stringify(a)),y.quoteText.innerHTML=s,y.quoteAuthor.innerHTML=e}function _t(){const t=document.createElement("button");t.className="scroll-up-button hidden";const e=document.createElementNS("http://www.w3.org/2000/svg","svg");e.setAttribute("viewBox","0 0 32 32"),e.setAttribute("class","button-icon");const s=document.createElementNS("http://www.w3.org/2000/svg","use");s.setAttributeNS("http://www.w3.org/1999/xlink","href",`${n}#icon-arrow`),e.appendChild(s),t.appendChild(e),t.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"})}),document.addEventListener("scroll",function(){window.scrollY>50?t.classList.remove("hidden"):t.classList.add("hidden")}),document.body.appendChild(t)}_t();function Lt(t){if(t)return t[0].toUpperCase()+t.slice(1)}function wt(t){const e=(t%1).toFixed(1)*100;let s='<div class="rating-container-not-cursore" data-rating="0">';for(let a=1;a<=t+1;a+=1)a<=t?s+=`<span class="star-js selected" data-value="${a}"><svg class="exercises_btn_start_icon_modal star-js selected">
+              <use xlink:href="${n}#icon-star"></use>
               />
-            </svg></span>`:t>0&&(s+=`<span class="last-star-js" data-value="${a}"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 20 19" fill="none">
+            </svg></span>`:e>0&&(s+=`<span class="last-star-js" data-value="${a}"><svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 20 19" fill="none">
                     <path d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z" fill="url(#paint0_linear_126_18474)"/>
                     <defs>
                     <linearGradient id="paint0_linear_126_18474" x1="20" y1="10" x2="-1.99998" y2="10.0209" gradientUnits="userSpaceOnUse">
-                    <stop offset="${100-t}%" stop-color="rgba(244, 244, 244, 0.20)" />
-                    <stop offset="${t}%" stop-color="#EEA10C" />
+                    <stop offset="${100-e}%" stop-color="rgba(244, 244, 244, 0.20)" />
+                    <stop offset="${e}%" stop-color="#EEA10C" />
                     </linearGradient>
                     </defs>
-                  </svg></span>`);for(let a=e+1;a<=5;a+=1)s+=`<span class="star-js" data-value="${a}"><svg class="exercises_btn_start_icon_modal star-js">
-              <use xlink:href="${c}#icon-star"></use>
+                  </svg></span>`);for(let a=t+1;a<=5;a+=1)s+=`<span class="star-js" data-value="${a}"><svg class="exercises_btn_start_icon_modal star-js">
+              <use xlink:href="${n}#icon-star"></use>
               />
-            </svg></span>`;return s+"</div>"}function Se(e){return e?`<button class="add-favorite-js" type="button" style="font-size: 14px;">
+            </svg></span>`;return s+"</div>"}function St(t){return t?`<button class="add-favorite-js" type="button" style="font-size: 14px;">
               <span class="remote-favorites">Remove from favorites</span>
               <svg class="trash-icon-img" width="15" height="15" aria-label="trash-icon">
-                  <use href="${c}#icon-trash"></use>
+                  <use href="${n}#icon-trash"></use>
               </svg>
           </button>`:`<button class="add-favorite-js" type="button" style="font-size: 14px;">
                 <span>Add to favorites</span>
                 <svg class="heart-icon-img" width="20" height="20" aria-label="heart-icon">
-                    <use href="${c}#icon-heart"></use>
+                    <use href="${n}#icon-heart"></use>
                 </svg>
-              </button>`}function Ee(e){return`<div class="modal-info" data-id="${e._id}">
+              </button>`}function Et(t){return`<div class="modal-info" data-id="${t._id}">
      <button class="modal-button-close" id="button-close">
       <svg class="close-icon-img" width="20" height="20" aria-label="close-icon">
-        <use href="${c}#icon-close"></use>
+        <use href="${n}#icon-close"></use>
       </svg>
     </button>
     <div class="modal-image-vrapper">
-      <img loading="lazy" class="modal-img" src="${e.gifUrl}" alt="${e.name}" />
+      <img loading="lazy" class="modal-img" src="${t.gifUrl}" alt="${t.name}" />
     </div>
     <div class="modal-content-wrapper">
       <div class="card-wrapper">
-        <h3 class="title-card-modal">${Le(e.name)}</h3>
-        <div class="rating-modal-container-wrapper"><p>${e.rating.toFixed(1)}</p>${we(e.rating)}</div>
+        <h3 class="title-card-modal">${Lt(t.name)}</h3>
+        <div class="rating-modal-container-wrapper"><p>${t.rating.toFixed(1)}</p>${wt(t.rating)}</div>
       </div>
       <hr class="modal-decoration-line" />
       <ul class="modal-table">
         <li>
           <h4 class="title-collum">Target</h4>
-          <p class="data-collumn">${e.target}</p>
+          <p class="data-collumn">${t.target}</p>
         </li>
         <li>
           <h4 class="title-collum">Body Part</h4>
-          <p class="data-collumn">${e.bodyPart}</p>
+          <p class="data-collumn">${t.bodyPart}</p>
         </li>
         <li>
           <h4 class="title-collum">Equipment</h4>
-          <p class="data-collumn">${e.equipment}</p>
+          <p class="data-collumn">${t.equipment}</p>
         </li>
         <li>
           <h4 class="title-collum">Popular</h4>
-          <p class="data-collumn">${e.popularity}</p>
+          <p class="data-collumn">${t.popularity}</p>
         </li>
         <li>
           <h4 class="title-collum">Burned Calories</h4>
-          <p class="data-collumn">${e.burnedCalories}/${e.time} min</p>
+          <p class="data-collumn">${t.burnedCalories}/${t.time} min</p>
         </li>
       </ul>
       <hr class="modal-decoration-line" />
       <p class="about-exercise">
-        ${e.description}
+        ${t.description}
       </p>
       <div class="button-section-modal">
-        <div class="refresh-button-js" data-favorite="${e.favorite}">
-          ${Se(e.favorite)}
+        <div class="refresh-button-js" data-favorite="${t.favorite}">
+          ${St(t.favorite)}
         </div>
         <button class="add-rating" type="button" style="font-size: 14px;">Give a rating</button>
-      </div>`}function xe(e){return`<div class="modal-get-raiting" data-id="${e}">
+      </div>`}function xt(t){return`<div class="modal-get-raiting" data-id="${t}">
     <button class="modal-button-close" id="button-close">
       <svg class="close-icon-img" width="20" height="20" aria-label="close-icon">
-        <use href="${c}#icon-close"></use>
+        <use href="${n}#icon-close"></use>
       </svg>
     </button>
     <div class="get-rating-container">
@@ -125,23 +125,23 @@ var J=Object.defineProperty;var D=(e,t,s)=>t in e?J(e,t,{enumerable:!0,configura
         <div class="rating-container-js rating-container" data-rating="" data-id="">
           <p class="user-rating-js">0</p>
           <span class="star-js" data-value="1"><svg class="exercises_btn_start_icon_rating star-js" wirth="15px" height="15px">
-              <use xlink:href="${c}#icon-star"></use>
+              <use xlink:href="${n}#icon-star"></use>
               />
             </svg></span>
           <span class="star-js" data-value="2"><svg class="exercises_btn_start_icon_rating star-js" wirth="15px" height="15px">
-              <use xlink:href="${c}#icon-star"></use>
+              <use xlink:href="${n}#icon-star"></use>
               />
             </svg></span>
           <span class="star-js" data-value="3"><svg class="exercises_btn_start_icon_rating star-js" wirth="15px" height="15px">
-              <use xlink:href="${c}#icon-star"></use>
+              <use xlink:href="${n}#icon-star"></use>
               />
             </svg></span>
           <span class="star-js" data-value="4"><svg class="exercises_btn_start_icon_rating star-js" wirth="15px" height="15px">
-              <use xlink:href="${c}#icon-star"></use>
+              <use xlink:href="${n}#icon-star"></use>
               />
             </svg></span>
           <span class="star-js" data-value="5"><svg class="exercises_btn_start_icon_rating star-js" wirth="15px" height="15px">
-              <use xlink:href="${c}#icon-star"></use>
+              <use xlink:href="${n}#icon-star"></use>
               />
             </svg></span>
         </div>
@@ -165,15 +165,15 @@ var J=Object.defineProperty;var D=(e,t,s)=>t in e?J(e,t,{enumerable:!0,configura
         <button class="raiting-form-submit" type="submit">Send</button>
       </form>
     </div>
-  </div>`}function $e(){const e=document.querySelector(".rating-container-js"),t=e.querySelectorAll(".exercises_btn_start_icon_rating");let s=e.querySelector(".user-rating-js");t.forEach((r,l)=>{r.addEventListener("mouseover",()=>a(l)),r.addEventListener("mouseout",o),r.addEventListener("click",()=>i(l+1))});function a(r){o();for(let l=0;l<=r;l++)t[l].classList.add("hovered"),s.textContent=`${l+1}`}function o(){t.forEach(r=>{const l=e.dataset.rating;r.classList.remove("hovered"),s.textContent=`${l||0}`})}function i(r){e.setAttribute("data-rating",r),t.forEach((l,L)=>{L+1<=r?l.classList.add("selected"):l.classList.remove("selected")})}}let u=[];const h=JSON.parse(localStorage.getItem("favorites"));h!=null&&h.length&&u.push(...h);function Be(e){se(e),u.push(e),localStorage.setItem("favorites",JSON.stringify(u))}const F=e=>{ae(e),u=u.filter(t=>t._id!==e),localStorage.setItem("favorites",JSON.stringify([...u]))};g.settings({timeout:6e3,resetOnHover:!0,icon:"material-icons",transitionIn:"flipInX",transitionOut:"flipOutX",position:"topRight"});class Ie{error(t){g.error({title:"Error",message:t})}success(t){g.success({title:"OK",message:t})}info(t){g.info({title:"Info",message:t})}}const M=new Ie,qe=document.querySelector(".filter-list-js");let O="";const ke=["BUTTON","svg","use","P"];let T,H,N;async function je(e){e.preventDefault();const t=document.querySelector(".modal-get-raiting").dataset.id,a=document.querySelector(".rating-container-js").dataset.rating,o=document.querySelector(".raiting-form-field-input").value,i=document.querySelector(".raiting-form-field-comment").value,r={rate:Number(a),email:o,review:i},l=await _.addExercisesRate(t,r);l.message?M.error(`${l.message}`):(M.success(`Thank you for your mark - ${r.rate} for ${l.name}`),p.close())}async function Ce(){const e=document.querySelector(".modal-info").dataset.id;p.close(),p.open(xe(e)),$e(),N=document.querySelector(".raiting-form"),N.addEventListener("submit",je)}async function Me(e){const t=document.querySelector(".refresh-button-js"),s=document.querySelector(".modal-info").dataset.id;let o=window.location.href.toString().slice(-14);if(t.dataset.favorite==="false"){t.innerHTML=`<button class="add-favorite-js" type="button">
+  </div>`}function $t(){const t=document.querySelector(".rating-container-js"),e=t.querySelectorAll(".exercises_btn_start_icon_rating");let s=t.querySelector(".user-rating-js");e.forEach((c,i)=>{c.addEventListener("mouseover",()=>a(i)),c.addEventListener("mouseout",r),c.addEventListener("click",()=>l(i+1))});function a(c){r();for(let i=0;i<=c;i++)e[i].classList.add("hovered"),s.textContent=`${i+1}`}function r(){e.forEach(c=>{const i=t.dataset.rating;c.classList.remove("hovered"),s.textContent=`${i||0}`})}function l(c){t.setAttribute("data-rating",c),e.forEach((i,L)=>{L+1<=c?i.classList.add("selected"):i.classList.remove("selected")})}}let u=[];const v=JSON.parse(localStorage.getItem("favorites"));v!=null&&v.length&&u.push(...v);function Bt(t){st(t),u.push(t),localStorage.setItem("favorites",JSON.stringify(u))}const F=t=>{at(t),u=u.filter(e=>e._id!==t),localStorage.setItem("favorites",JSON.stringify([...u]))};g.settings({timeout:6e3,resetOnHover:!0,icon:"material-icons",transitionIn:"flipInX",transitionOut:"flipOutX",position:"topRight"});class It{error(e){g.error({title:"Error",message:e})}success(e){g.success({title:"OK",message:e})}info(e){g.info({title:"Info",message:e})}}const M=new It,kt=document.querySelector(".filter-list-js");let T="";const qt=["BUTTON","svg","use","P"];let H,O,R;async function jt(t){t.preventDefault();const e=document.querySelector(".modal-get-raiting").dataset.id,a=document.querySelector(".rating-container-js").dataset.rating,r=document.querySelector(".raiting-form-field-input").value,l=document.querySelector(".raiting-form-field-comment").value,c={rate:Number(a),email:r,review:l},i=await _.addExercisesRate(e,c);i.message?M.error(`${i.message}`):(M.success(`Thank you for your mark - ${c.rate} for ${i.name}`),p.close())}async function Ct(){const t=document.querySelector(".modal-info").dataset.id;p.close(),p.open(xt(t)),$t(),R=document.querySelector(".raiting-form"),R.addEventListener("submit",jt)}async function Mt(t){const e=document.querySelector(".refresh-button-js"),s=document.querySelector(".modal-info").dataset.id;let r=window.location.href.toString().slice(-14);if(e.dataset.favorite==="false"){e.innerHTML=`<button class="add-favorite-js" type="button">
                                         <span class="remote-favorites">Remove from favorites</span>
                                         <svg class="trash-icon-img" width="18" height="18" aria-label="trash-icon">
-                                            <use href="${c}#icon-trash"></use>
+                                            <use href="${n}#icon-trash"></use>
                                         </svg>
-                                    </button>`,t.dataset.favorite="true";let i=await _.getOneExercises(s);Be(i),o==="favorites.html"&&m()}else t.innerHTML=`<button class="add-favorite-js" type="button">
+                                    </button>`,e.dataset.favorite="true";let l=await _.getOneExercises(s);Bt(l),r==="favorites.html"&&m()}else e.innerHTML=`<button class="add-favorite-js" type="button">
                                         <span>Add to favorites</span>
                                         <svg class="heart-icon-img" width="20" height="20" aria-label="heart-icon">
-                                            <use href="${c}#icon-heart"></use>
+                                            <use href="${n}#icon-heart"></use>
                                         </svg>
-                                    </button>`,t.dataset.favorite="false",F(s),o==="favorites.html"&&m()}function Oe({target:e}){if(ke.includes(e.nodeName)&&e.classList[0]!=="favourites_btn_trash_icon"&&e.classList[0]!=="favourites_btn_workout")return O=e.dataset.id,Te(O);if(e.classList[0]==="favourites_btn_trash_icon"){const t=e.dataset.id;F(t),m()}}qe.addEventListener("click",Oe);const Te=async e=>{let t=await _.getOneExercises(e);const s=localStorage.getItem("favorites");s!==null&&JSON.parse(s).find(({_id:i})=>i===e)?t.favorite=!0:t.favorite=!1,p.open(Ee(t)),H=document.querySelector(".refresh-button-js"),T=document.querySelector(".add-rating"),T.addEventListener("click",Ce),H.addEventListener("click",Me)};
+                                    </button>`,e.dataset.favorite="false",F(s),r==="favorites.html"&&m()}function Tt({target:t}){if(qt.includes(t.nodeName)&&t.classList[0]!=="favourites_btn_trash_icon"&&t.classList[0]!=="favourites_btn_workout")return T=t.dataset.id,Ht(T);if(t.classList[0]==="favourites_btn_trash_icon"){const e=t.dataset.id;F(e),m()}}kt.addEventListener("click",Tt);const Ht=async t=>{let e=await _.getOneExercises(t);const s=localStorage.getItem("favorites");s!==null&&JSON.parse(s).find(({_id:l})=>l===t)?e.favorite=!0:e.favorite=!1,p.open(Et(e)),O=document.querySelector(".refresh-button-js"),H=document.querySelector(".add-rating"),H.addEventListener("click",Ct),O.addEventListener("click",Mt)};
 //# sourceMappingURL=commonHelpers.js.map
